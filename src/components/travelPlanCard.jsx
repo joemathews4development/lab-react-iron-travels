@@ -14,11 +14,14 @@ function TravelPlanCard(props) {
                     {props.plan.allInclusive && <label style={premiumLabelStyle}>All-inclusive</label>}
                 </div>
                 <br />
-                <button style={{ color: "black", padding: "5px", backgroundColor: "#ABA9AB", borderRadius: "5px" }} onClick={() => props.onDelete(props.plan.id)}>Delete</button>
+                <div style={{display:"flex", justifyContent:"space-around"}}>
+                    <button style={{ color: "black", padding: "5px", backgroundColor: "#ABA9AB", borderRadius: "5px" }} onClick={() => props.onDelete(props.plan.id)}>Delete</button>
+                    <button style={{ color: "black", padding: "5px", backgroundColor: "#ABA9AB", borderRadius: "5px" }} onClick={() => props.onFavorite(props.plan)}>💙</button>
+                </div>
             </div>
         </div>
     )
-    
+
 }
 
 export default TravelPlanCard
